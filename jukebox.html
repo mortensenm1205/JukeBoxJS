@@ -7,20 +7,20 @@
   <body>
     <!-- Songs to add-->
 
-    <select>
+    <select id="song-selection">
       <option>Select a song</option>
       <option value="sampleAudio.mp3">Song 1</option>
-      <option>Song 2</option>
-      <option>Song 3</option>
     </select>
 
-    <div id="selected-song"></div>
+    <h1 id="selected-song"></h1>
 
-    <input type="button" value="Play">
-    <input type="button" value="Pause">
+    <input id="play-btn" type="button" value="Play">
+    <input id="pause-btn" type="button" value="Pause">
 
 
 
     <script src="Jukebox.js"></script>
+    <script src="View.js"></script>
+    <script src="index.js" async></script>
   </body>
 </html>

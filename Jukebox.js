@@ -9,9 +9,11 @@
     this.songs.push(someSong);
   }
 
-  Jukebox.prototype.selectedSong = function(song) {
-    
+  Jukebox.prototype.selectedSong = function(event, view) {
+        this.addSong(event.target.value);
+        return view.songToDisplay(event);
   }
+
 
   Jukebox.prototype.playSong = function(song) {
     return song.play();
