@@ -1,7 +1,7 @@
 (function(global) {
 
   function Jukebox() {
-    this.songs = [];
+    this.songs = [0];
   }
 
   Jukebox.prototype.addSong = function(song) {
@@ -14,13 +14,12 @@
         return view.songToDisplay(event);
   }
 
-
-  Jukebox.prototype.playSong = function(song) {
-    return song.play();
+  Jukebox.prototype.playSong = function(event) {
+     this.songs[event.target.selectedIndex].play();
   }
 
-  Jukebox.prototype.pauseSong = function(song) {
-    return song.pause();
+  Jukebox.prototype.pauseSong = function(event) {
+     this.songs[event.target.selectedIndex].pause();
   }
 
   global.Jukebox = Jukebox;
