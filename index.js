@@ -11,9 +11,9 @@ var pauseBtn = document.querySelector('#pause-btn');
 selection.addEventListener('change', function(event) {
   songResults.innerHTML = jukebox.selectedSong(event, view);
   playBtn.addEventListener('click', function() {
-    jukebox.playSong(event);
+    jukebox.playSong();
   });
   pauseBtn.addEventListener('click', function() {
-    jukebox.pauseSong(event);
+    jukebox.pauseSong();
   });
 });
