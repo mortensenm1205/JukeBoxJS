@@ -6,12 +6,13 @@
 
   Jukebox.prototype.addSong = function(song) {
     var someSong = new Audio(song);
-    this.songs= someSong;
+    this.songs = someSong;
   }
 
   Jukebox.prototype.selectedSong = function(event, view) {
       if(event.target.value === "Select a song") {
         alert('Please choose a song');
+        return view.chooseASong();
       } else {
         this.addSong(event.target.value);
         return view.songToDisplay(event);
