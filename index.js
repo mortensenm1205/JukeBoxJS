@@ -9,7 +9,7 @@ var pauseBtn = document.querySelector('#pause-btn');
 
 
 selection.addEventListener('change', function(event) {
-  songResults.innerHTML = jukebox.selectedSong(event, view);
+  songResults.innerHTML = jukebox.selectedSong(songResults, event, view);
 });
 
 playBtn.addEventListener('click', function() {

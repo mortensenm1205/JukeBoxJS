@@ -9,12 +9,13 @@
     this.songs = someSong;
   }
 
-  Jukebox.prototype.selectedSong = function(event, view) {
+  Jukebox.prototype.selectedSong = function(el, event, view) {
       if(event.target.value === "Select a song") {
         alert('Please choose a song');
         return view.chooseASong();
       } else {
         this.addSong(event.target.value);
+        view.addSongToPage(el, this.songs);
         return view.songToDisplay(event);
       }
   }
@@ -26,6 +27,7 @@
   Jukebox.prototype.pauseSong = function() {
      this.songs.pause();
   }
+
 
   global.Jukebox = Jukebox;
 

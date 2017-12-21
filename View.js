@@ -10,6 +10,10 @@
     return "Choose a song please!";
   }
 
+  View.prototype.addSongToPage = function(el, song) {
+      console.log(el, song);
+  }
+
   global.View = View;
 
 })(this);
