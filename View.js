@@ -11,7 +11,12 @@
   }
 
   View.prototype.addSongToPage = function(el, song) {
-      console.log(el, song);
+    if(el.childElementCount >= 1) {
+      el.firstChild.remove();
+      return el.append(song);
+    } else {
+      return el.append(song);
+    }
   }
 
   global.View = View;
